@@ -34,10 +34,7 @@
 
 .hero-title-accent {
   display: block;
-  background: linear-gradient(90deg, #ffffff 0%, #737373 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .hero-subtitle {
