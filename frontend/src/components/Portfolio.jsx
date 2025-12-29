@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import HeroSection from './HeroSection';
-import AboutSection from './AboutSection';
 import StartupsSection from './StartupsSection';
 import PassionsSection from './PassionsSection';
+import BooksSection from './BooksSection';
 import ContactSection from './ContactSection';
 import Navigation from './Navigation';
 import './Portfolio.css';
@@ -22,9 +22,9 @@ const Portfolio = () => {
     <div className="portfolio">
       <Navigation scrolled={scrolled} />
       <HeroSection />
-      <AboutSection />
       <StartupsSection />
       <PassionsSection />
+      <BooksSection />
       <ContactSection />
     </div>
   );

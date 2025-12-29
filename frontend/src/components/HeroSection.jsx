@@ -8,11 +8,10 @@ const HeroSection = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Building the
-              <span className="hero-title-accent"> Future</span>
+              I build <span className="hero-purple-text">technology</span> for human progress
             </h1>
             <p className="hero-subtitle">
-              Tech Entrepreneur solving complex problems at scale
+              2x Tech Entrepreneur solving complex problems at scale
             </p>
           </div>
         </div>

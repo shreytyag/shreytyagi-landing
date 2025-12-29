@@ -1,58 +1,54 @@
 import React from 'react';
-import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import './ContactSection.css';
 
 const ContactSection = () => {
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('shrey@myjobb.ai');
+    alert('Email copied to clipboard!');
+  };
+
   return (
     <section className="contact-section section" id="contact">
-      <div className="container">
-        <h2 className="section-title">Let's Connect</h2>
-        <p className="section-subtitle">Always open to discussing new opportunities and collaborations</p>
+      <div className="contact-container">
+        <div className="contact-left">
+          <h2 className="contact-title">Let's Collaborate</h2>
+          <p className="contact-subtitle">Book a call with me –</p>
+        </div>
         
-        <div className="contact-content">
-          <div className="contact-cards">
-            <a href="mailto:shrey@myjobb.ai" className="contact-card">
-              <div className="contact-icon-wrapper">
-                <Mail size={28} className="contact-icon" />
-              </div>
-              <div className="contact-info">
-                <h3 className="contact-title">Email</h3>
-                <p className="contact-detail">shrey@myjobb.ai</p>
-              </div>
-              <ArrowUpRight size={20} className="contact-arrow" />
-            </a>
-            
-            <a 
-              href="https://www.linkedin.com/in/yourjobwithshrey/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="contact-card"
-            >
-              <div className="contact-icon-wrapper">
-                <Linkedin size={28} className="contact-icon" />
-              </div>
-              <div className="contact-info">
-                <h3 className="contact-title">LinkedIn</h3>
-                <p className="contact-detail">yourjobwithshrey</p>
-              </div>
-              <ArrowUpRight size={20} className="contact-arrow" />
-            </a>
-          </div>
-          
-          <div className="contact-cta">
-            <p className="cta-text">Ready to build something amazing together?</p>
-            <a href="mailto:shrey@myjobb.ai" className="cta-button">
-              Get in Touch
-            </a>
+        <div className="contact-center">
+          <a href="https://calendly.com/tyagishrey996/30min" target="_blank" rel="noopener noreferrer" className="contact-circle-link">
+            <div className="contact-circle">
+              <ArrowUpRight size={32} className="contact-circle-icon" />
+            </div>
+          </a>
+        </div>
+
+        <div className="contact-right">
+          <div className="contact-email-section">
+            <p className="contact-email">shrey@myjobb.ai</p>
+            <button onClick={handleCopyEmail} className="copy-button">
+              📋 Copy to clipboard
+            </button>
           </div>
         </div>
       </div>
-      
-      <footer className="footer">
-        <div className="footer-content">
-          <p className="footer-text">© 2025 Shrey. Building the future, one startup at a time.</p>
-        </div>
-      </footer>
+
+      <div className="contact-links">
+        <a href="https://www.linkedin.com/in/yourjobwithshrey/" target="_blank" rel="noopener noreferrer" className="contact-link">
+          LinkedIn
+        </a>
+        <a href="mailto:shrey@myjobb.ai" className="contact-link">
+          Email
+        </a>
+        <a href="https://cal.com/yourjobwithshrey" target="_blank" rel="noopener noreferrer" className="contact-link cta">
+          Get in Touch
+        </a>
+      </div>
+
+      <div className="footer">
+        <p className="footer-text">© Shrey Tyagi 2025</p>
+      </div>
     </section>
   );
 };

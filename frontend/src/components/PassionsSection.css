@@ -1,107 +1,115 @@
 .passions-section {
-  background: #0a0a0a;
-  min-height: auto;
+  background: var(--bg-primary);
+  min-height: 100vh;
   padding: 8rem 2rem;
-}
-
-.passions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.passion-card {
-  background: #1a1a1a;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border: 1px solid #2a2a2a;
-}
-
-.passion-card:hover {
-  transform: translateY(-6px);
-  border-color: #404040;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.passion-image-container {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-}
-
-.passion-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  filter: grayscale(20%);
-}
-
-.passion-card:hover .passion-image {
-  transform: scale(1.1);
-  filter: grayscale(0%);
-}
-
-.passion-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(10, 10, 10, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.passion-card:hover .passion-overlay {
-  opacity: 1;
+.work-container {
+  max-width: 1200px;
+  width: 100%;
 }
 
-.passion-icon {
-  color: #ffffff;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+.work-header {
+  margin-bottom: 6rem;
+  position: relative;
 }
 
-.passion-content {
-  padding: 2rem;
+.work-number {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.passion-title {
-  font-size: 1.5rem;
+.work-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.work-principles {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.principle-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.principle-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.principle-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
-  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
-.passion-description {
-  font-size: 0.95rem;
-  color: #737373;
-  line-height: 1.6;
+.principle-separator {
+  width: 100px;
+  height: 8px;
+  background: var(--text-muted);
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+.principle-description {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 900px;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 768px) {
   .passions-section {
     padding: 5rem 1.5rem;
   }
-  
-  .passions-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+
+  .work-header {
+    margin-bottom: 3rem;
   }
-  
-  .passion-image-container {
-    height: 220px;
+
+  .work-number {
+    font-size: 2rem;
   }
-  
-  .passion-content {
-    padding: 1.5rem;
+
+  .work-title {
+    font-size: 1.75rem;
+  }
+
+  .work-principles {
+    gap: 3rem;
+  }
+
+  .principle-card {
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .principle-title {
+    font-size: 1.25rem;
+  }
+
+  .principle-description {
+    font-size: 0.9rem;
   }
 }
